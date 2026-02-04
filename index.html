@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be My Valentine?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+h1, h2 {
+    animation: fadeIn 2s ease;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* heartbeat */
+.heart {
+    font-size: 60px;
+    animation: heartbeat 1.2s infinite;
+    margin: 20px 0;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* gifts */
+.gift {
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    animation: fadeIn 2s ease;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+    <source src="https://dl.sndup.net/f3xw/Wanna%20Be%20Yours%20-%20Arctic%20Monkeys.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>Will you be my Valentine</h1>
+    <h2>Aarifa Miss Rude ?? 😏❤️</h2>
+    <div class="heart">❤️</div>
+    <button onclick="nextPage(2)">Next 💌</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>Virtual Gifts For You 🎁</h1>
+
+    <div class="gift">
+        <img src="https://images.unsplash.com/photo-1524594169739-3e2e1a1c9b6c">
+        <p>I know you love tulips flower 🌷  
+        aur flower nahi de paya kyunki  
+        <br><b>apki mummy dekh legi 😂</b></p>
+    </div>
+
+    <div class="gift">
+        <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif">
+        <p>Virtual Kiss For You 😘</p>
+    </div>
+
+    <div class="gift">
+        <h2>Loveeeeeeeeee u my girl 🫶❤️💗</h2>
+    </div>
+
+    <div class="gift">
+        <h3>21st January 💋</h3>
+        <p>You kissed me…  
+        That day will always be memorable ❤️</p>
+    </div>
+
+    <button onclick="nextPage(3)">Next 💖</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>My Letter For You 💌</h1>
+    <div class="heart">❤️</div>
+
+    <p style="font-size:18px; max-width:600px; margin:auto;">
+        i love u soo much ❤️ aarifa  
+        <br><br>
+        idk how u became my habit  
+        i just wanna see u everydayyy  
+        <br><br>
+        i just want to spend sooooooooooo muchh time with u  
+        my aarifa  
+        <br><br>
+        i love every everyday, every hours, every min, every seconds with you  
+        <br><br>
+        🫶 love you
+    </p>
+</div>
+
+<script>
+function nextPage(num) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + num).classList.add('active');
+}
+</script>
+
+</body>
+</html>
